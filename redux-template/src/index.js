@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import App from './App';
+import App from './App';
 import Container from './components/Container'
 // Import Redux
 import {createStore} from 'redux'
@@ -20,7 +20,8 @@ ReactDOM.render(
     <BrowserRouter>
      <BaseLayout>
         <Switch>
-          <Route exact path ="/" component = {Container}/>
+          <Route exact path ="/" component = {App}/>
+          <Route exact path ="/container" component = {Container}/>
         </Switch>
       </BaseLayout> 
     </BrowserRouter>

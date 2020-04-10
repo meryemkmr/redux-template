@@ -5,7 +5,18 @@ let templateReducer = (state,action) => {
     if(state === undefined){
         state ={
             count: 0,
-            someArray:[]  // array of objects
+            someArray:[
+                {
+                    id:1,
+                    name: 'Meryem',
+                    age:21
+                },
+                {
+                    id:2,
+                    name: 'Aydin',
+                    age:22
+                }
+            ]  // array of objects
         }
     }
     switch(action.type){
@@ -22,14 +33,15 @@ let templateReducer = (state,action) => {
                 someArray:state.someArray.concat(action.data)
             }
         case TESTCASE_DELETE:
+            console.log('reducer delete')
             // DELETING to array
             let filteredArray = state.someArray.filter(item=>{
                 return item.id != action.id
             })
-
+            console.log('filtered array',filteredArray)
             return {
                 ...state,
-                filteredArray
+                someArray:filteredArray
             }
 
             default:

@@ -17,6 +17,7 @@ export const testCaseAdd = (dataObj) =>{
 }
 
 export const testCaseDelete = (id) =>{
+    console.log('test case delete action called')
     return {
         type: TESTCASE_DELETE,
         id: id

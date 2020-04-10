@@ -6,11 +6,11 @@ const BaseLayout = (props) => {
   return (
     <>
     <Header />
+    <br />
+            {props.children}
+      <br />
 
-{props.children}
-<br />
-
-<Footer />
+    <Footer />
 
     </>
   )

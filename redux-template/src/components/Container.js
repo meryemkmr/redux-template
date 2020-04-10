@@ -7,7 +7,7 @@ class Container extends Component {
         this.state = {
             count: 0,
             obj: {
-                id: 4,
+                id: 3,
                 name: "Alex",
                 age: 21
             },
@@ -21,7 +21,7 @@ class Container extends Component {
             this.props.testCase1(this.state.count)
         })
     }
-    handleDelete = () => {
+    handleDelete = (e) => {
         this.props.testCaseDelete(this.state.id);
         this.setState({
             obj: this.props.tempSomeArray
