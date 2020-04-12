@@ -11,7 +11,7 @@ let books = (state, action) => {
         case ADD_BOOK:
             return {
                 ...state,
-                books: [...state.books, action.author]
+                books: [...state.books, action.book]
             };
         case REMOVE_BOOK:
             idx = state.books.findIndex(author => author.id === action.id);
